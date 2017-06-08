@@ -17,6 +17,8 @@ import android.view.MenuItem;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.TreeSet;
+
+import polytechnice.tobeortohave.fidelite.PreferenceFragment;
 import polytechnice.tobeortohave.notifications.NotificationSetter;
 import polytechnice.tobeortohave.parrainage.MainParrainageFragment;
 import polytechnice.tobeortohave.R;
@@ -104,6 +106,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             fragment = MainParrainageFragment.newInstance();
         } else if (id == R.id.nav_home) {
             fragment = CarouselFragment.newInstance();
+        }
+        else if(id==R.id.preferences){
+            fragment = PreferenceFragment.newInstance();
         }
 
         FragmentManager fragmentManager = getSupportFragmentManager();

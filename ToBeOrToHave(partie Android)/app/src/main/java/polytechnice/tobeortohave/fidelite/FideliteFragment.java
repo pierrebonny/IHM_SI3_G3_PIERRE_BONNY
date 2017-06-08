@@ -30,7 +30,6 @@ public class FideliteFragment extends Fragment {
     private Space space3;
     private Space space4;
     private Space space5;
-    private Button alertes;
 
     public static FideliteFragment newInstance(){
         FideliteFragment fragment = new FideliteFragment();
@@ -56,8 +55,6 @@ public class FideliteFragment extends Fragment {
         space2 = (Space)getView().findViewById(R.id.space2);
         space3 = (Space)getView().findViewById(R.id.space3);
         space4 = (Space)getView().findViewById(R.id.space4);
-        space5 = (Space)getView().findViewById(R.id.space5);
-        alertes = (Button)getView().findViewById(R.id.alertes);
         setupElements();
     }
 
@@ -65,28 +62,17 @@ public class FideliteFragment extends Fragment {
         title.setText("Une carte, beaucoup de privilèges !");
         title.setTypeface(null, Typeface.BOLD);
         title.setTextColor(ContextCompat.getColor(getContext(),R.color.colorNextToWhite));
-        internet.setText("-Des réductions toute l'année sur vos achats en ligne !");
+        internet.setText("Des réductions toute l'année sur vos achats en ligne !");
         internet.setTextColor(ContextCompat.getColor(getContext(),R.color.colorNextToWhite));
-        points.setText("-Profitez de nombreux cadeaux grâce à vos parrainageHome toBeHappy !");
+        points.setText("De nombreux cadeaux grâce à vos points toBeHappy !");
         points.setTextColor(ContextCompat.getColor(getContext(),R.color.colorNextToWhite));
-        soldes.setText("-Des ventes privées avant les soldes !");
+        soldes.setText("Des ventes privées avant les soldes !");
         soldes.setTextColor(ContextCompat.getColor(getContext(),R.color.colorNextToWhite));
-        soldesSup.setText("-Une réduction de -10% supplémentaires pendant toute la durée des soldes !");
+        soldesSup.setText("Une réduction de -10% supplémentaires pendant toute la durée des soldes !");
         soldesSup.setTextColor(ContextCompat.getColor(getContext(),R.color.colorNextToWhite));
         space1.setMinimumHeight(10);
         space2.setMinimumHeight(10);
         space3.setMinimumHeight(10);
         space4.setMinimumHeight(10);
-        space5.setMinimumHeight(10);
-        alertes.setText("Définir mes préférences concernant les alertes bons plans");
-        alertes.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
-                Fragment fragment = PointsFragment.newInstance();
-                fragmentTransaction.replace(R.id.flContent,fragment).commit();
-            }
-        });
-        alertes.setTextColor(ContextCompat.getColor(getContext(),R.color.colorNextToWhite));
     }
 }

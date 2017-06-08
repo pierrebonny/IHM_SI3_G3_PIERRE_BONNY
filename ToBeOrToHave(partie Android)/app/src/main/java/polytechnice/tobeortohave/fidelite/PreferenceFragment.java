@@ -1,19 +1,16 @@
 package polytechnice.tobeortohave.fidelite;
 
 import android.content.SharedPreferences;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.SwitchPreferenceCompat;
 import android.support.v7.preference.PreferenceFragmentCompat;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
 import polytechnice.tobeortohave.R;
 import polytechnice.tobeortohave.main.MainActivity;
@@ -23,14 +20,14 @@ import static android.content.Context.MODE_PRIVATE;
 /**
  * Created by Pierre on 09/05/2017.
  */
-public class PointsFragment extends PreferenceFragmentCompat {
+public class PreferenceFragment extends PreferenceFragmentCompat {
     private SwitchPreferenceCompat switch1;
     private SwitchPreferenceCompat switch2;
     private SwitchPreferenceCompat switch3;
     private TextView title;
 
-    public static PointsFragment newInstance(){
-        PointsFragment fragment = new PointsFragment();
+    public static PreferenceFragment newInstance(){
+        PreferenceFragment fragment = new PreferenceFragment();
         return fragment;
     }
 

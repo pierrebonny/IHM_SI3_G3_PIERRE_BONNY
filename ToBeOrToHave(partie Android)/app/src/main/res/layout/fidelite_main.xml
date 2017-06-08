@@ -15,64 +15,90 @@
         android:layout_height="50dp"
         android:layout_below="@+id/title"
         android:id="@+id/space1"/>
+
+    <ImageView
+        android:id="@+id/vrai1"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/vrai"
+        android:paddingLeft="10dp"
+        android:layout_below="@+id/space1"
+        android:layout_alignParentStart="true" />
     <TextView
-        android:padding="10dp"
         android:id="@+id/soldes"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/space1"
+        android:paddingTop="5dp"
+        android:paddingLeft="10dp"
+        android:layout_toRightOf="@id/vrai1"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
     <android.support.v4.widget.Space
         android:layout_width="match_parent"
-        android:layout_height="10dp"
+        android:layout_height="30dp"
         android:layout_below="@+id/soldes"
         android:id="@+id/space2"/>
+    <ImageView
+        android:id="@+id/vrai2"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/vrai"
+        android:paddingLeft="10dp"
+        android:layout_below="@+id/space2"
+        android:layout_alignParentStart="true" />
+
     <TextView
-        android:padding="10dp"
         android:id="@+id/points"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/space2"
+        android:layout_toRightOf="@id/vrai2"
+        android:paddingTop="5dp"
+        android:paddingLeft="10dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
     <android.support.v4.widget.Space
         android:layout_width="match_parent"
-        android:layout_height="10dp"
+        android:layout_height="30dp"
         android:layout_below="@+id/points"
         android:id="@+id/space3"/>
-    <TextView
-        android:padding="10dp"
-        android:id="@+id/internet"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
+    <ImageView
+        android:id="@+id/vrai3"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/vrai"
+        android:paddingLeft="10dp"
         android:layout_below="@+id/space3"
+        android:layout_alignParentStart="true" />
+    <TextView
+        android:id="@+id/internet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/space3"
+        android:layout_toRightOf="@id/vrai3"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
     <android.support.v4.widget.Space
         android:layout_width="match_parent"
-        android:layout_height="10dp"
+        android:layout_height="30dp"
         android:layout_below="@+id/internet"
         android:id="@+id/space4"/>
+    <ImageView
+        android:id="@+id/vrai4"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/vrai"
+        android:paddingLeft="10dp"
+        android:layout_below="@+id/space4"
+        android:layout_alignParentStart="true" />
     <TextView
-        android:padding="10dp"
+        android:layout_toRightOf="@id/vrai4"
+        android:paddingLeft="10dp"
         android:id="@+id/soldesSup"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
         android:layout_below="@+id/space4"
+        android:paddingTop="5dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
-    <android.support.v4.widget.Space
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_below="@+id/soldesSup"
-        android:id="@+id/space5"/>
-    <Button
-        android:layout_width="240dp"
-        android:layout_height="wrap_content"
-        android:paddingStart="30dp"
-        android:paddingEnd="30dp"
-        android:id="@+id/alertes"
-        android:layout_below="@+id/space5"
-        android:layout_centerHorizontal="true"
-        android:background="@drawable/button"/>
 
 </RelativeLayout>
