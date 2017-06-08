@@ -35,7 +35,6 @@ public class MyNotification {
     public MyNotification(Context context,List<String> data) {
         this.context = context;
         bigTextStyle = new Notification.BigTextStyle();
-        bigTextStyle.setBigContentTitle("Alertes Bons Plans");
         bitmap = BitmapFactory.decodeResource(context.getResources(),R.drawable.cot);
         this.data = data;
         initializeInboxStyle();
@@ -50,15 +49,15 @@ public class MyNotification {
         builder.setContentText("");
         builder.setLargeIcon(bitmap);
         builder.setAutoCancel(true);
-        builder.setSmallIcon(R.drawable.pouce);
+        builder.setSmallIcon(R.drawable.cintre);
         builder.setStyle(bigTextStyle);
         builder.setDefaults(Notification.DEFAULT_LIGHTS);
         builder.setVibrate(new long[]{0l});
-        nManager.notify("ToBeOrToHave",0,builder.build());
+        nManager.notify("",0,builder.build());
     }
 
     private void initializeInboxStyle(){
-        bigTextStyle.setSummaryText("Aujourd'hui dans vos magasins ToBeHappy");
+        bigTextStyle.setSummaryText("Alerte Bons Plans");
         StringBuilder builder = new StringBuilder();
         for(int i = 0; i< data.size(); i++){
             if(i == data.size() -1){
