@@ -74,14 +74,13 @@ public class CarouselAdapter extends BaseAdapter {
             public void onClick(View v) {
                 final Dialog dialog = new Dialog(fragment.getActivity());
                 dialog.setContentView(R.layout.dialog);
-                dialog.setCancelable(true); // dimiss when touching outside
+                dialog.setCancelable(true);
                 dialog.setTitle("Article Details");
-
                 TextView text = (TextView) dialog.findViewById(R.id.name);
-                text.setText(getItem(position).getName());
+                text.setText(getItem(position).getDetails());
+                text.setTextColor(Color.BLACK);
                 ImageView image = (ImageView) dialog.findViewById(R.id.image);
                 image.setImageResource(getItem(position).getImageSource());
-
                 dialog.show();
             }
         };

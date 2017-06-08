@@ -45,10 +45,7 @@ public class ParrainageHomeFragment extends Fragment implements FragmentInterfac
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.parrainage_home,container,false);
-        rootView.setBackgroundColor(Color.parseColor("#6495E1"));
-        SharedPreferences.Editor editor = getActivity().getSharedPreferences("com.mobileapp.smartapplocker", MODE_PRIVATE).edit();
-        editor.clear();
-        editor.commit();
+        rootView.setBackgroundColor(ContextCompat.getColor(getContext(),R.color.colorMain));
         return rootView;
     }
 

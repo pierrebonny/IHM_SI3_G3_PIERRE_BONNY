@@ -8,10 +8,12 @@ public class Article {
 
     private String name;
     private int imageResource;
+    private String details;
 
-    public Article(int imageResource, String name){
+    public Article(int imageResource, String name,String details){
         this.imageResource = imageResource;
         this.name = name;
+        this.details = details;
     }
 
     public String getName() {
@@ -21,4 +23,6 @@ public class Article {
     public int getImageSource() {
         return imageResource;
     }
+
+    public String getDetails(){return details;}
 }

@@ -56,8 +56,8 @@ public class CarouselFragment extends Fragment{
 
     private void settingDummyData() {
         articles = new ArrayList<>();
-        articles.add(new Article(R.drawable.bonnet,"Bonnet Carhortt: 20€"));
-        articles.add(new Article(R.drawable.teeshirt,"Tee Shirt Licoste: 35€"));
-        articles.add(new Article(R.drawable.chaussures,"Chaussures Adadas 55€"));
+        articles.add(new Article(R.drawable.bonnet,"Bonnet Carhortt: 20€","Bonnet en laine naturelle, fabrication française"));
+        articles.add(new Article(R.drawable.teeshirt,"Tee Shirt Licoste: 35€","Teeshirt en coton synthétique, fabrication allemande"));
+        articles.add(new Article(R.drawable.chaussures,"Chaussures Adadas 55€","Chaussures en toile synthétique, fabrication chinoise"));
     }
 }
