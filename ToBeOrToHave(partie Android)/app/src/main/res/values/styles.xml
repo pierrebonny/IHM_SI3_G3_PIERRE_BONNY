@@ -5,16 +5,19 @@
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorAccent">@color/colorNextToWhite</item>
         <item name="android:listDivider">@android:color/black</item>
-        <item name="preferenceTheme">@style/PreferenceThemeOverlay</item>
+        <item name="preferenceTheme">@style/PreferenceThemeOverlay.v14.Material</item>
     </style>
 
     <style name="switchTheme">
         <item name="colorControlActivated">@color/colorPrimaryDark</item>
         <item name="colorSwitchThumbNormal">#F8FFFF</item>
     </style>
-
+    <style name="PreferenceThemeOverlay.v14">
+        <item name="android:background">@color/colorMain</item>
+        <item name="android:textColor">@color/colorNextToWhite</item>
+    </style>
     <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>

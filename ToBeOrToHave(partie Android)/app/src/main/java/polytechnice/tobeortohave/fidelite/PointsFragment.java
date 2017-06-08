@@ -3,6 +3,7 @@ package polytechnice.tobeortohave.fidelite;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.SwitchPreferenceCompat;
 import android.support.v7.preference.PreferenceFragmentCompat;
@@ -36,13 +37,13 @@ public class PointsFragment extends PreferenceFragmentCompat {
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
         addPreferencesFromResource(R.xml.preferences);
-
     }
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.points_layout, container, false);
-        rootView.setBackgroundColor(Color.parseColor("#6495E1"));
+        rootView.setBackgroundColor(ContextCompat.getColor(getContext(),R.color.colorMain));
         return super.onCreateView(inflater, container, savedInstanceState);
     }
 

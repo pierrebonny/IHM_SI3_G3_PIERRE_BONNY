@@ -3,21 +3,19 @@ package polytechnice.tobeortohave.parrainage;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.Cursor;
-import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.support.design.widget.TextInputLayout;
 import android.support.v4.app.Fragment;
+import android.support.v4.content.ContextCompat;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import polytechnice.tobeortohave.R;
 
 import static android.app.Activity.RESULT_OK;
@@ -46,7 +44,7 @@ public class NewParrainageFragment extends Fragment implements FragmentInterface
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.new_parrainage,container,false);
-        rootView.setBackgroundColor(Color.parseColor("#6495E1"));
+        rootView.setBackgroundColor(ContextCompat.getColor(getContext(),R.color.colorMain));
         return rootView;
     }
 
@@ -60,14 +58,14 @@ public class NewParrainageFragment extends Fragment implements FragmentInterface
         la2.setHint("Prénom");
         la3.setHint("Numéro de Mobile");
         newText1 = (TextView)getView().findViewById(R.id.newText1);
-        newText1.setTextColor(Color.parseColor("#F8FFFF"));
+        newText1.setTextColor(ContextCompat.getColor(getContext(),R.color.colorNextToWhite));
         newText1.setText("Définir manuellement un filleul");
         newText = (TextView)getView().findViewById(R.id.newText);
-        newText.setTextColor(Color.parseColor("#F8FFFF"));
+        newText.setTextColor(ContextCompat.getColor(getContext(),R.color.colorNextToWhite));
         newText.setText("Définir un filleul à partir de ma liste de contacts");
         button = (Button)getView().findViewById(R.id.new_button);
         button.setText("Valider");
-        button.setTextColor(Color.parseColor("#F8FFFF"));
+        button.setTextColor(ContextCompat.getColor(getContext(),R.color.colorNextToWhite));
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -76,7 +74,7 @@ public class NewParrainageFragment extends Fragment implements FragmentInterface
         });
         button1 = (Button)getView().findViewById(R.id.new_button1);
         button1.setText("Rechercher dans mes contacts");
-        button1.setTextColor(Color.parseColor("#F8FFFF"));
+        button1.setTextColor(ContextCompat.getColor(getContext(),R.color.colorNextToWhite));
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -93,9 +91,7 @@ public class NewParrainageFragment extends Fragment implements FragmentInterface
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        // Check which request it is that we're responding to
         if (requestCode == PICK_CONTACT_REQUEST) {
-            // Make sure the request was successful
             if (resultCode == RESULT_OK) {
                 Uri contactUri = data.getData();
                 String[] projection = {ContactsContract.Contacts.DISPLAY_NAME};

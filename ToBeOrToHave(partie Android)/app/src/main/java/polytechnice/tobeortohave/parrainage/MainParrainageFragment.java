@@ -4,6 +4,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -28,7 +29,7 @@ public class MainParrainageFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.parrainage, container, false);
-        rootView.setBackgroundColor(Color.parseColor("#F5F5DC"));
+        rootView.setBackgroundColor(ContextCompat.getColor(getContext(),R.color.colorFond));
         return rootView;
     }
 
@@ -36,8 +37,6 @@ public class MainParrainageFragment extends Fragment {
     public void onActivityCreated(Bundle bundle){
         super.onActivityCreated(bundle);
         mSectionsPagerAdapter = new SectionsPagerAdapter(getChildFragmentManager());
-
-        // Set up the ViewPager with the sections adapter.
         mViewPager = (ViewPager) getView().findViewById(R.id.container);
         mViewPager.setAdapter(mSectionsPagerAdapter);
         mViewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {

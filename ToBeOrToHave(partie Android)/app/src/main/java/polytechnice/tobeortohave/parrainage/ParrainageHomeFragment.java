@@ -6,6 +6,7 @@ import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.content.ContextCompat;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -62,14 +63,14 @@ public class ParrainageHomeFragment extends Fragment implements FragmentInterfac
     public void setupElements(){
         filleulsNames = new ArrayList<>();
         text = (TextView)getView().findViewById(R.id.parTitle);
-        text.setTextColor(Color.parseColor("#F8FFFF"));
+        text.setTextColor(ContextCompat.getColor(getContext(),R.color.colorNextToWhite));
         SharedPreferences prefs = getActivity().getSharedPreferences("com.mobileapp.smartapplocker", MODE_PRIVATE);
         String key = "filleul";
         int i = 0;
         while(prefs.contains(key)){
             filleulsNames.add(new TextView(getContext()));
             filleulsNames.get(i).setText("-" + prefs.getString(key,"error"));
-            filleulsNames.get(i).setTextColor(Color.parseColor("#F8FFFF"));
+            filleulsNames.get(i).setTextColor(ContextCompat.getColor(getContext(),R.color.colorNextToWhite));
             filleulsNames.get(i).setId(i);
             filleulsNames.get(i).setTextSize(15);
             if(i>0){

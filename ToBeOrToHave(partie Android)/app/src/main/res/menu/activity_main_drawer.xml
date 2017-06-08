@@ -5,15 +5,18 @@
         <item
             android:id="@+id/nav_home"
             android:icon="@drawable/home"
-            android:title="Home" />
+            android:title="Home"/>
+    </group>
+    <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_parrainage"
             android:icon="@drawable/poigne"
-            android:title="Parrainage"/>
+            android:title="Parrainage" />
+    </group>
+    <group android:checkableBehavior="single">
         <item
             android:id="@+id/offres_du_moment"
             android:icon="@drawable/pouce"
             android:title="Bons Plans" />
     </group>
-
 </menu>

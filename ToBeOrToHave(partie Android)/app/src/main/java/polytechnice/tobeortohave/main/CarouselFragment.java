@@ -4,6 +4,7 @@ import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -34,7 +35,7 @@ public class CarouselFragment extends Fragment{
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.new_carousel,container,false);
-        rootView.setBackgroundColor(Color.parseColor("#6495E1"));
+        rootView.setBackgroundColor(ContextCompat.getColor(getContext(),R.color.colorMain));
         return rootView;
     }
 
@@ -49,7 +50,7 @@ public class CarouselFragment extends Fragment{
         title = (TextView)getView().findViewById(R.id.carouseltitle);
         title.setText("Produits du moment");
         title.setTypeface(null, Typeface.BOLD);
-        title.setTextColor(Color.parseColor("#F8FFFF"));
+        title.setTextColor(ContextCompat.getColor(getContext(),R.color.colorNextToWhite));
     }
 
 
