@@ -1,0 +1,174 @@
+/* Fonts */
+@font-face {
+    src: url("/styles/CroissantOne-Regular.ttf");
+}
+
+@font-face {
+    src: url("/styles/Lato-Regular.ttf");
+}
+
+/* Application wide styles */
+
+.root-container {
+    -fx-background-color: linear-gradient(from 30% 45% to 75% 90%,rgba(0,0,0,0), #8ec64e 0%, #41aba0 100%) repeat scroll 0 0;
+}
+.label {
+    -fx-font-family: "Lato";
+    -fx-text-fill: #333333;
+}
+
+.hyperlink {
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 17px;
+    -fx-font-weight: bold;
+    -fx-border-color: transparent;
+    -fx-underline: false;
+}
+
+/* Component specific styles */
+
+/* Home view styles */
+
+.navigation-bar {
+    -fx-background-color: wheat;
+    -fx-border-width: 1px;
+    -fx-border-color: dimgrey;
+    -fx-padding: 10px;
+}
+
+.menu-bar {
+    -fx-background-color: inherit;
+}
+
+
+.store-name{
+    -fx-font-size: 18px;
+}
+.home-presentation {
+    -fx-font-size: 20px;
+}
+
+.menu-label-top-level {
+    -fx-font-size: 16px;
+    -fx-background-color: transparent;
+    -fx-cursor: hand;
+    -fx-font-weight: bold;
+}
+
+#homeViewImage {
+    -fx-padding: 20 0 0 0;
+}
+
+.menu-item, #homeViewImage, #homeViewLabel {
+    -fx-cursor: hand;
+}
+
+.navigation-arrows:hover {
+    -fx-cursor: hand;
+}
+
+.navigation-arrow-right {
+    -fx-image: url("/images/right-arrow.png");
+}
+
+.navigation-arrow-left {
+    -fx-image: url("/images/left-arrow.png");
+}
+
+.navigation-arrow-right:hover {
+    -fx-image: url("/images/right-arrow-hover.png");
+}
+
+.navigation-arrow-left:hover {
+    -fx-image: url("/images/left-arrow-hover.png");
+}
+
+/* End of Home view styles */
+
+
+/* Products view styles */
+.product-navigation-button {
+    -fx-font-size: 22px;
+    -fx-padding: 10 0 0 0;
+}
+
+.v-box-product-button {
+    -fx-cursor: hand;
+    -fx-border-color: #333333;
+    -fx-border-width: 1px;
+    -fx-background-color:
+            linear-gradient(#ffd65b, #e68400),
+            linear-gradient(#ffef84, #f2ba44),
+            linear-gradient(#ffea6a, #efaa22),
+            linear-gradient(#ffe657 0%, #f8c202 50%, #eea10b 100%),
+            linear-gradient(from 0% 0% to 15% 50%, rgba(255,255,255,0.9), rgba(255,255,255,0));
+    -fx-padding: 10 0 0 0;
+}
+
+.v-box-product-button:hover {
+    -fx-background-color:
+            linear-gradient(#ffd042, #cd7500),
+            linear-gradient(#ffec6b, #f0b12c),
+            linear-gradient(#ffe651, #e79f11),
+            linear-gradient(#ffe23e 0%, #dfae02 50%, #d6910a 100%),
+            linear-gradient(from 15% 50% to 0% 0%, rgba(255,255,255,0.9), rgba(255,255,255,0));
+}
+
+/* This doesn't work atm, further fix will be added */
+.v-box-product-button:pressed {
+       -fx-effect: innershadow(gaussian, rgba(0, 0, 0, 0.65), 10, 0.5, 0.0, 0.0);
+}
+
+#productTitle {
+    -fx-font-weight: bold;
+    -fx-padding: 0 0 0 0;
+}
+
+/* Product > Menu view styles */
+
+.back-to-products-container {
+    -fx-cursor: hand;
+}
+
+.menu-description {
+    -fx-font-family: "Croissant One";
+    fx-font-size: 15px;
+    -fx-border-color: dimgray;
+    -fx-border-width: 1px;
+    -fx-padding: 2 2 2 2;
+}
+
+/* Contact view styles */
+
+#buttonSendMail {
+    -fx-cursor: hand;
+    -fx-background-color: white;
+    -fx-border-color: white;
+}
+
+#buttonSendMail:hover {
+    -fx-background-color: #317d51;
+    -fx-border-color: #317d51;
+}
+
+#textSendMail {
+    -fx-font-family: "Lato";
+    -fx-text-fill: #47b475;
+    -fx-font-weight: bold;
+    -fx-font-size: 20px;
+}
+
+.text-field-contact:focused {
+    -fx-background-insets: 0, 1, 2;
+    -fx-background-radius: 1;
+}
+
+.text-field-contact, .text-area-contact .content {
+    -fx-background-color: #DEDEDE;
+    -fx-border-color: #DEDEDE;
+    -fx-text-fill: dimgray;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-border-radius: 0;
+    -fx-select-on-focus:false;
+}

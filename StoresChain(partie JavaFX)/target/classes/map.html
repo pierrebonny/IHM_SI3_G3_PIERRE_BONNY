@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html> 
+    <head> 
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no" /> 
+        <style type="text/css"> 
+            html { height: 100% } 
+            body { height: 100%; margin: 0px; padding: 0px } 
+            #map_canvas { height: 100%; background-color: #666970; } 
+        </style> 
+        <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+        </script>
+        <script type="text/javascript">
+            var franceCenter = [46.5286346952716, 2.43896484375];
+
+            function initialize() { 
+                var latlng = new google.maps.LatLng(franceCenter[0], franceCenter[1]);
+                var myOptions = { 
+                    zoom: 6,
+                    center: latlng, 
+                    mapTypeId: google.maps.MapTypeId.ROADMAP, 
+                    disableDoubleClickZoom: false, 
+                    keyboardShortcuts: true, 
+                    scrollwheel: true, 
+                    draggable: true, 
+                    disableDefaultUI: false, // Completly disable all controls. 
+                    mapTypeControl: false, // Allow to change map type. 
+                    overviewMapControl: false, // Small window of overview. 
+                    panControl: false, // Disc used to pan the map. 
+                    rotateControl: false, // Scale slider? 
+                    navigationControl: false, // Scale slider? 
+                    streetViewControl: false, // Place a streetview camera. 
+                    scaleControl: false, // Scale slider? 
+                    zoomControl: false, // Scale slider? 
+                    backgroundColor: "#666970", 
+                }; 
+  
+                document.geocoder = new google.maps.Geocoder(); 
+                var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+  
+                document.zoomIn = function zoomIn() { 
+                    var zoomLevel = document.map.getZoom(); 
+                    if (zoomLevel <= 20) 
+                        document.map.setZoom(zoomLevel + 1); 
+                } 
+  
+                document.zoomOut = function zoomOut() { 
+                    var zoomLevel = document.map.getZoom(); 
+                    if (zoomLevel > 0) 
+                        document.map.setZoom(zoomLevel - 1); 
+                }
+
+                var request = new XMLHttpRequest();
+                request.open("GET", "marker.json", false);
+                request.send(null)
+                var json = JSON.parse(request.responseText);
+
+                for(var i = 0; i < json.length; i++) {
+                    var marker = new google.maps.Marker( {
+                        position: {lat: json[i].lat, lng: json[i].lng},
+                        title: json[i].title
+                    });
+                    marker.setMap(map);
+                }
+
+            }
+
+        function a() {
+        }
+
+        </script> 
+    </head> 
+    <body onload="initialize()">
+        <div id="map_canvas" style="width:100%; height:100%"></div>
+    </body>
+</html>

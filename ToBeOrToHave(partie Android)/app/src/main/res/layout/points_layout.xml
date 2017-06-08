@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/pointsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <android.support.v4.widget.Space
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:id="@+id/spacep"
+        android:layout_below="@id/pointsTitle"/>
+    <android.support.v7.widget.SwitchCompat
+        android:id="@+id/switch1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spacep"
+        android:padding="5dp"
+        android:theme="@style/switchTheme"/>
+    <android.support.v4.widget.Space
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/spacep1"
+        android:layout_below="@id/switch1"/>
+    <android.support.v7.widget.SwitchCompat
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/switch2"
+        android:layout_below="@id/spacep1"
+        android:theme="@style/switchTheme"
+        android:padding="5dp"/>
+    <android.support.v4.widget.Space
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/spacep2"
+        android:layout_below="@id/switch2"/>
+    <android.support.v7.widget.SwitchCompat
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/switch3"
+        android:layout_below="@id/spacep2"
+        android:theme="@style/switchTheme"
+        android:padding="5dp"/>
+
+</RelativeLayout>

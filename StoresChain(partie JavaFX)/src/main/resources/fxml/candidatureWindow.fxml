@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="rootContainer" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.unice.polytech.si3.ihm.controller.CandidatureWindowController">
+   <center>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="619.0" prefWidth="770.0" stylesheets="@/styles/styles.css">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="40.0" prefWidth="770.0" text="Rejoignez nous !">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <GridPane layoutX="25.0" layoutY="36.0" prefHeight="255.0" prefWidth="650.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="421.0" minWidth="10.0" prefWidth="143.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="507.0" minWidth="0.0" prefWidth="507.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label alignment="CENTER" prefHeight="32.0" prefWidth="142.0" text="Prénom" />
+                  <Label alignment="CENTER" layoutX="10.0" layoutY="11.0" prefHeight="32.0" prefWidth="142.0" text="Nom" GridPane.rowIndex="1" />
+                  <Label alignment="CENTER" layoutX="10.0" layoutY="45.0" prefHeight="32.0" prefWidth="142.0" text="Age" GridPane.rowIndex="2" />
+                  <Label alignment="CENTER" layoutX="10.0" layoutY="79.0" prefHeight="32.0" prefWidth="142.0" text="Numéro de téléphone" GridPane.rowIndex="6" />
+                  <Label alignment="CENTER" layoutX="10.0" layoutY="11.0" prefHeight="32.0" prefWidth="142.0" text="Adresse Email" GridPane.rowIndex="5" />
+                  <TextField fx:id="lastname" onAction="#check1" prefHeight="38.0" prefWidth="507.0" promptText="votre nom" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField fx:id="age" layoutX="153.0" layoutY="10.0" onAction="#check2" prefHeight="38.0" prefWidth="507.0" promptText="votre age" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <TextField fx:id="firstname" layoutX="153.0" layoutY="44.0" onAction="#check" prefHeight="38.0" prefWidth="507.0" promptText="votre prénom" GridPane.columnIndex="1">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </TextField>
+                  <TextField fx:id="email_Adress" layoutX="153.0" layoutY="10.0" onAction="#check5" prefHeight="38.0" prefWidth="507.0" promptText="votre adresse email" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                  <TextField fx:id="phone_number" layoutX="153.0" layoutY="112.0" onAction="#check6" prefHeight="38.0" prefWidth="507.0" promptText="votre numéro de téléphone" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                  <Label alignment="CENTER" layoutX="10.0" layoutY="147.0" prefHeight="32.0" prefWidth="142.0" text="Niveau d'études" GridPane.rowIndex="8" />
+                  <Label alignment="CENTER" layoutX="10.0" layoutY="181.0" prefHeight="32.0" prefWidth="142.0" text="Type d'emploi souhaité" GridPane.rowIndex="9" />
+                  <Label alignment="CENTER" layoutX="10.0" layoutY="215.0" prefHeight="32.0" prefWidth="142.0" text="Mobilité" GridPane.rowIndex="10" />
+                  <ComboBox fx:id="studiesComboBox" onAction="#check8" prefHeight="32.0" prefWidth="507.0" promptText="Veuilez sélectionner une des options" GridPane.columnIndex="1" GridPane.rowIndex="8">
+                      <items>
+                          <FXCollections fx:factory="observableArrayList">
+                              <String fx:value="under bac" />
+                              <String fx:value="bac" />
+                              <String fx:value="bac+2" />
+                              <String fx:value="bac+3" />
+                              <String fx:value="bac+5" />
+                              <String fx:value="bac+7" />
+                          </FXCollections>
+                      </items>
+                  </ComboBox>
+                  <ComboBox fx:id="positionComboBox" layoutX="153.0" layoutY="181.0" onAction="#check9" prefHeight="32.0" prefWidth="507.0" promptText="Veuilez sélectionner une des options" GridPane.columnIndex="1" GridPane.rowIndex="9">
+                      <items>
+                          <FXCollections fx:factory="observableArrayList">
+                              <String fx:value="Waiter" />
+                              <String fx:value="Cleaning Person" />
+                              <String fx:value="Cook" />
+                              <String fx:value="Franchise director" />
+                              <String fx:value="Orders picker" />
+                          </FXCollections>
+                      </items>
+                  </ComboBox>
+                  <ComboBox fx:id="mobilityComboBox" layoutX="153.0" layoutY="215.0" onAction="#check10" prefHeight="32.0" prefWidth="507.0" promptText="Veuilez sélectionner une des options" GridPane.columnIndex="1" GridPane.rowIndex="10">
+                      <items>
+                          <FXCollections fx:factory="observableArrayList">
+                              <String fx:value="My city" />
+                              <String fx:value="My department" />
+                              <String fx:value="My region" />
+                              <String fx:value="France" />
+                              <String fx:value="Other" />
+                              <String fx:value="No matter" />
+                          </FXCollections>
+                      </items>
+                  </ComboBox>
+                  <Label alignment="CENTER" layoutX="10.0" layoutY="66.0" prefHeight="32.0" prefWidth="142.0" text="Adresse" GridPane.rowIndex="3" />
+                  <TextField fx:id="adress" layoutX="153.0" layoutY="66.0" onAction="#check3" prefHeight="38.0" prefWidth="507.0" promptText="votre adresse" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <TextField fx:id="postcode" layoutX="153.0" layoutY="85.0" onAction="#check4" prefHeight="38.0" prefWidth="507.0" promptText="votre adresse postale" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <Label alignment="CENTER" layoutX="10.0" layoutY="85.0" prefHeight="32.0" prefWidth="142.0" text="Code Postal" GridPane.rowIndex="4" />
+                  <Label alignment="CENTER" layoutX="10.0" layoutY="148.0" prefHeight="32.0" prefWidth="142.0" text="Periode souhaitée" GridPane.rowIndex="7" />
+                  <TextField fx:id="desired_period" layoutX="153.0" layoutY="147.0" onAction="#check7" prefHeight="38.0" prefWidth="507.0" promptText="MM-AAAA till MM-AAAA " GridPane.columnIndex="1" GridPane.rowIndex="7" />
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </GridPane>
+            <Label alignment="CENTER" layoutX="25.0" layoutY="375.0" prefHeight="32.0" prefWidth="142.0" text="Motivations" />
+            <TextArea fx:id="motivations" layoutX="168.0" layoutY="320.0" onKeyTyped="#check11" prefHeight="171.0" prefWidth="507.0" promptText="Expliquez en quelques lignes pourquoi vous souhaitez nous rejoindre et pourquoi vous pensez que nous devrions vous prendre" />
+            <Label alignment="CENTER" layoutY="506.0" prefHeight="32.0" prefWidth="165.0" text="Comment nous avez-vous connu ?">
+               <font>
+                  <Font size="10.0" />
+               </font></Label>
+            <CheckBox fx:id="web" layoutX="175.0" layoutY="498.0" mnemonicParsing="false" text="Notre site internet" />
+            <CheckBox fx:id="newspapers" layoutX="317.0" layoutY="498.0" mnemonicParsing="false" text="Presse" />
+            <CheckBox fx:id="othersWeb" layoutX="468.0" layoutY="498.0" mnemonicParsing="false" text="Autres sites internet" />
+            <CheckBox fx:id="tv" layoutX="589.0" layoutY="498.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="86.0" text="Télévision" />
+            <CheckBox fx:id="adds" layoutX="175.0" layoutY="522.0" mnemonicParsing="false" text="Publicités dans la rue" />
+            <CheckBox fx:id="dont" layoutX="316.0" layoutY="522.0" mnemonicParsing="false" text="Je ne sais pas" />
+            <CheckBox fx:id="other" layoutX="468.0" layoutY="522.0" mnemonicParsing="false" text="Autre" />
+            <Button fx:id="submitButton" layoutX="316.0" layoutY="572.0" mnemonicParsing="false" onAction="#thankYou" prefHeight="33.0" prefWidth="138.0" text="Soumettre" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

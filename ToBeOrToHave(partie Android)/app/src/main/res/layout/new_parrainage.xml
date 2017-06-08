@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/newText1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:paddingTop="10dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Light.SearchResult.Title" />
+    <android.support.v4.widget.Space
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_below="@id/newText1"
+        android:id="@+id/newSpace"/>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/la1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/newSpace"
+        android:orientation="horizontal"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp">
+
+        <EditText
+            android:id="@+id/newNom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/new_border"
+            android:textAlignment="center"
+            android:hint="Nom du filleul"
+            android:inputType="textEmailAddress"
+            android:textColorHint="@color/colorFond" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/la2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/la1"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp">
+
+        <EditText
+            android:id="@+id/newPrenom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/newNom"
+            android:layout_marginTop="20dp"
+            android:textAlignment="center"
+            android:background="@drawable/new_border"
+            android:hint="Prénom du filleul"
+            android:inputType="textEmailAddress"
+            android:textColorHint="@color/colorFond" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/la3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/la2"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp">
+
+        <EditText
+            android:id="@+id/newNum"
+            android:textAlignment="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/newPrenom"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/new_border"
+            android:hint="Numéro de mobile"
+            android:maxLength="10"
+            android:inputType="textEmailAddress"
+            android:textColorHint="@color/colorFond" />
+    </android.support.design.widget.TextInputLayout>
+    <android.support.v4.widget.Space
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_below="@id/la3"
+        android:id="@+id/newSpace1"/>
+    <Button
+        android:id="@+id/new_button"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:layout_below="@+id/newSpace1"
+        android:layout_alignStart="@+id/new_button1"
+        android:background="@drawable/button"/>
+    <android.support.v4.widget.Space
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/new_button"
+        android:id="@+id/newSpace2"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="10dp"
+        android:id="@+id/newText"
+        android:layout_below="@id/newSpace2"
+        android:textAppearance="@style/TextAppearance.AppCompat.Light.SearchResult.Title"/>
+    <android.support.v4.widget.Space
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_below="@id/newText"
+        android:id="@+id/newSpace3"/>
+    <Button
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:paddingStart="30dp"
+        android:paddingEnd="30dp"
+        android:id="@+id/new_button1"
+        android:layout_below="@+id/newSpace3"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/button"/>
+
+</RelativeLayout>

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<BorderPane fx:id="rootContainer" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1024.0" styleClass="root-container" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="fr.si3.ihm.projet.MentionsController">
+  <bottom>
+    <HBox alignment="CENTER" prefHeight="48.0" prefWidth="1024.0" BorderPane.alignment="CENTER">
+      <children>
+        <Hyperlink fx:id="contactView" text="Nous Contacter &gt;" />
+        <Region prefHeight="200.0" prefWidth="200.0" />
+        <Hyperlink fx:id="mentionsView" text="Mentions Légales &gt;" />
+      </children>
+    </HBox>
+  </bottom>
+  <center>
+    <HBox prefHeight="100.0" prefWidth="200.0">
+      <children>
+        <Region prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+        <VBox prefHeight="200.0" prefWidth="100.0">
+          <children>
+            <Region maxHeight="-Infinity" minHeight="-Infinity" prefHeight="50.0" prefWidth="100.0" />
+            <Label alignment="CENTER" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="400.0" text="Informations sur la Société :" textAlignment="CENTER">
+              <font>
+                <Font name="System Bold" size="18.0" fx:id="x2" />
+              </font>
+            </Label>
+            <Label alignment="CENTER" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="400.0" text="S.A.R.L. Truc au capital de 12k€" VBox.vgrow="NEVER">
+              <font>
+                <Font size="16.0" fx:id="x1" />
+              </font>
+            </Label>
+            <Label alignment="CENTER" font="$x1" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="400.0" text="91 rue de la bouffe" />
+            <Label alignment="CENTER" font="$x1" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="400.0" text="06560 Valbonne" />
+            <Label alignment="CENTER" font="$x1" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="400.0" text="Tel : 0612345678" />
+            <Label alignment="CENTER" font="$x1" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="400.0" text="contact@truc.fr" />
+            <Label alignment="CENTER" font="$x1" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="400.0" text="Numéro RCS 1234567890" />
+            <Label alignment="CENTER" font="$x1" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="400.0" text="TVA intrammunautaire numéro 4256387450" />
+            <Region maxHeight="-Infinity" minHeight="-Infinity" prefHeight="50.0" prefWidth="100.0" />
+            <Label alignment="CENTER" font="$x2" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="400.0" text="Responsable de la publication :" />
+            <Label alignment="CENTER" font="$x1" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="400.0" text="Mr Hernest Tournesol" />
+            <Region maxHeight="-Infinity" minHeight="-Infinity" prefHeight="50.0" prefWidth="100.0" />
+            <Label alignment="CENTER" font="$x2" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="400.0" text="Hébergeur :" />
+            <Label alignment="CENTER" font="$x1" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="400.0" text="S.A.R.L. gebairgepachair.com" />
+            <Label alignment="CENTER" font="$x1" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="400.0" text="85 rue de rivoli" />
+            <Label alignment="CENTER" font="$x1" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="400.0" text="75000 Paris" />
+            <Label alignment="CENTER" font="$x1" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="400.0" text="Tel : 0685743291" />
+          </children>
+        </VBox>
+        <Region prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+      </children>
+    </HBox>
+  </center>
+  <top>
+    <HBox alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="66.0" prefWidth="1024.0" styleClass="navigation-bar" BorderPane.alignment="CENTER">
+      <children>
+        <HBox alignment="BOTTOM_LEFT" prefHeight="100.0" prefWidth="310.0">
+          <children>
+            <ImageView fx:id="homeViewImage" fitHeight="74.0" fitWidth="184.0" pickOnBounds="true" preserveRatio="true">
+              <image>
+                <Image url="/images/logo.png" />
+              </image>
+            </ImageView>
+            <Label fx:id="homeViewLabel" prefHeight="61.0" prefWidth="100.0" styleClass="store-name" text="Nom du magasin" wrapText="true">
+              <HBox.margin>
+                <Insets bottom="5.0" left="20.0" />
+              </HBox.margin>
+            </Label>
+          </children>
+          <HBox.margin>
+            <Insets left="10.0" />
+          </HBox.margin>
+        </HBox>
+        <MenuBar fx:id="menuBar" prefHeight="66.0" prefWidth="668.0" style="-fx-padding: 10;">
+          <menus>
+            <Menu mnemonicParsing="false" fx:id="topMenuProduct">
+              <graphic>
+                <Label fx:id="productView" prefHeight="36.0" prefWidth="75.0" styleClass="menu-label-top-level" text="Produits" wrapText="true">
+                  <font>
+                    <Font size="15.0" fx:id="x3" />
+                  </font>
+                </Label>
+              </graphic>
+              <items>
+                <MenuItem mnemonicParsing="false" text="Menus" fx:id="productMenuView" />
+                <MenuItem mnemonicParsing="false" text="Entrées" fx:id="productStarterView" />
+                <MenuItem mnemonicParsing="false" text="Plats" fx:id="productMealView" />
+                <MenuItem mnemonicParsing="false" text="Desserts" fx:id="productFinisherView" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false">
+              <graphic>
+                <Label font="$x3" prefHeight="58.0" prefWidth="137.0" styleClass="menu-label-top-level" text="Notre Restaurant" wrapText="true" />
+              </graphic>
+            </Menu>
+            <Menu mnemonicParsing="false" fx:id="topMenuAbout">
+              <graphic>
+                <Label fx:id="aboutView" font="$x3" prefHeight="36.0" prefWidth="109.0" styleClass="menu-label-top-level" text="Nous Trouver" wrapText="true" />
+              </graphic>
+              <items>
+                <MenuItem mnemonicParsing="false" text="A Propos" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false">
+              <graphic>
+                <Label fx:id="topMenuDiscounts" font="$x3" prefHeight="50.0" prefWidth="82.0" styleClass="menu-label-top-level" text="Bon Plans" />
+              </graphic>
+            </Menu>
+          </menus>
+        </MenuBar>
+        <HBox alignment="CENTER" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="66.0" prefWidth="361.0">
+          <children>
+            <TextField prefHeight="38.0" prefWidth="196.0" promptText="Search" />
+            <ImageView fitHeight="38.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+              <image>
+                <Image url="/images/search.png" />
+              </image>
+              <HBox.margin>
+                <Insets left="5.0" />
+              </HBox.margin>
+            </ImageView>
+          </children>
+        </HBox>
+      </children>
+    </HBox>
+  </top>
+</BorderPane>
