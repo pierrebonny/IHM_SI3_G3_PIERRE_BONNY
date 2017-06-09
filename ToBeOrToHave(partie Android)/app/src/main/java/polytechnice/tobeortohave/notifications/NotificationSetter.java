@@ -29,11 +29,13 @@ public class NotificationSetter {
     }
 
     public PendingIntent setNotifications(ArrayList<String> data,Bundle b) {
-        b = setBundle(data,b);
         Intent intent = new Intent(activity, AlarmReceiver.class);
+        b = setBundle(data,b);
         intent.putExtras(b);
         PendingIntent pendingIntent = PendingIntent.getBroadcast(activity, ((int) System.currentTimeMillis()), intent, PendingIntent.FLAG_UPDATE_CURRENT);
-        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, 10000, 60000, pendingIntent);
+        if (data.size()>0){
+            alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, 10000, 60000, pendingIntent);
+        }
         return pendingIntent;
     }
 
