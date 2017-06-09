@@ -12,6 +12,7 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import java.util.ArrayList;
@@ -135,8 +136,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         data.add("notre grand jeu du mois dans l'un de nos magasins");
         SharedPreferences.Editor editor = getSharedPreferences("com.mobileapp.smartapplocker", MODE_PRIVATE).edit();
         SharedPreferences prefs = getSharedPreferences("com.mobileapp.smartapplocker", MODE_PRIVATE);
-        editor.remove("data");
-        editor.commit();
         if(!prefs.contains("data")){
             TreeSet<String> set = new TreeSet<>(c);
             set.addAll(data);
